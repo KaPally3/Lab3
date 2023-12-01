@@ -1,0 +1,22 @@
+gcc test.c -Wall -Werror -Wextra
+./a.out 100 1
+./a.out 500 1
+./a.out 1000 1
+./a.out 1500 1
+./a.out 2000 1
+./a.out 2500 1
+./a.out 3000 1
+./a.out 3500 1
+./a.out 4000 1
+./a.out 4500 1
+./a.out 5000 1
+./a.out 5500 1
+./a.out 6000 1
+./a.out 6500 1
+./a.out 7000 1
+./a.out 7500 1
+./a.out 8000 1
+./a.out 8500 1
+./a.out 9000 1
+./a.out 9500 1
+./a.out 10000 1

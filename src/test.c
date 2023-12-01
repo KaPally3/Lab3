@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-// #define N 5
 #define high 1000.0
 #define low 0.0
 
@@ -15,17 +14,6 @@ void commonMultiMatrix(int N, double **A, double **B, double **C);
 void DGEMM_opt_1(int N, double **A, double **B, double **C);
 // void printMatrix(int N, double **A, double **B, double **C);
 void freeMatrix(int N, double **A, double **B, double **C);
-
-char Pmodel[1000];
-char Pmodel_new[1000] = "\0";
-int LNum = 1;
-int fcF = 0;
-double avgTimee = 0.0;
-double avgTimee_o = 0.0;
-double absErr = 0.0;
-double relErr = 0.0;
-double taskPef = 0.0;
-
 void Matrix(int rep, int N);
 
 int main(int argc, char **argv) {

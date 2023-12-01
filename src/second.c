@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+// #define N 5
 #define high 1000.0
 #define low 0.0
 
@@ -10,7 +11,7 @@ void csvFile(int size, double *time_spent_1, double *time_spent_2);
 void initCSV();
 void initMatrix(int N, double *time_spent_1, double *time_spent_2);
 void fillMatrix(int N, double **A, double **B);
-void commonMultiMatrix(int N, double **A, double **B, double **C);
+// void commonMultiMatrix(int N, double **A, double **B, double **C);
 void DGEMM_opt_1(int N, double **A, double **B, double **C);
 // void printMatrix(int N, double **A, double **B, double **C);
 void freeMatrix(int N, double **A, double **B, double **C);
@@ -49,11 +50,11 @@ void initMatrix(int N, double *time_spent_1, double *time_spent_2) {
   }
   fillMatrix(N, A, B);
 
-  clock_t begin_1 = clock();
-  srand(time(NULL));
-  commonMultiMatrix(N, A, B, C);
-  clock_t end_1 = clock();
-  *time_spent_1 += (double)(end_1 - begin_1) / CLOCKS_PER_SEC;
+  //   clock_t begin_1 = clock();
+  //   srand(time(NULL));
+  //   commonMultiMatrix(N, A, B, C);
+  //   clock_t end_1 = clock();
+  //   *time_spent_1 += (double)(end_1 - begin_1) / CLOCKS_PER_SEC;
 
   clock_t begin_2 = clock();
   srand(time(NULL));
@@ -74,13 +75,13 @@ void fillMatrix(int N, double **A, double **B) {
     }
 }
 
-void commonMultiMatrix(int N, double **A, double **B, double **C) {
-  for (int i = 0; i < N; i++)
-    for (int j = 0; j < N; j++) {
-      C[i][j] = 0;
-      for (int k = 0; k < N; k++) C[i][j] += A[i][k] * B[k][j];
-    }
-}
+// void commonMultiMatrix(int N, double **A, double **B, double **C) {
+//   for (int i = 0; i < N; i++)
+//     for (int j = 0; j < N; j++) {
+//       C[i][j] = 0;
+//       for (int k = 0; k < N; k++) C[i][j] += A[i][k] * B[k][j];
+//     }
+// }
 
 void DGEMM_opt_1(int N, double **A, double **B, double **C) {
   for (int i = 0; i < N; i++)
