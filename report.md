@@ -78,25 +78,25 @@
 
 ​	Квадратные матрицы задаются динамически:
 
-![1](/home/kapally3/Desktop/NSTU/Lab3/images/1.png)
+![1](images/1.png)
 
 ​	Заполняются случайными элементами типа double от 0 до 1000:
 
-![2](/home/kapally3/Desktop/NSTU/Lab3/images/2.png)
+![2](images/2.png)
 
-​							![3](/home/kapally3/Desktop/NSTU/Lab3/images/3.png) 
+​							![3](images/3.png) 
 
 ​	В функции main принимаются 2 значения - размер матрицы и количество повторов:
 
-![4](/home/kapally3/Desktop/NSTU/Lab3/images/4.png)
+![4](images/4.png)
 
 ​	В терминале ввод пользователя выглядит так - название, размер, повторы:
 
-![5](/home/kapally3/Desktop/NSTU/Lab3/images/5.png)
+![5](images/5.png)
 
 ​	Перемножение квадратных матриц DGEMM BLAS:
 
-![6](/home/kapally3/Desktop/NSTU/Lab3/images/6.png)
+![6](images/6.png)
 
 
 
@@ -110,21 +110,21 @@
 
 ​	Был написан простой bash скрипт, который автоматически запускал тесты, по мере выполнения предыдущих:
 
-​											![7](/home/kapally3/Desktop/NSTU/Lab3/images/7.png)
+​											![7](images/7.png)
 
 ​	Результат выполнения записывался в файл формата .csv:
 
 ​		Запись:
 
-![8](/home/kapally3/Desktop/NSTU/Lab3/images/8.png)
+![8](images/8.png)
 
 ​		Результат:
 
-![9](/home/kapally3/Desktop/NSTU/Lab3/images/9.png)
+![9](images/9.png)
 
 ​	График зависимости времени выполнения программы от объёма входных данных:
 
-![10](/home/kapally3/Desktop/NSTU/Lab3/images/10.png)
+![10](images/10.png)
 
 
 
@@ -162,7 +162,7 @@ $$
 
 ### Решение:
 
-![11](/home/kapally3/Desktop/NSTU/Lab3/images/11.png)
+![11](images/11.png)
 
 
 
@@ -209,11 +209,11 @@ $$
 
 ​	Исходная программа: 
 
-![12](/home/kapally3/Desktop/NSTU/Lab3/images/12.png)
+![12](images/12.png)
 
 ​	Первый способ оптимизации доступа к памяти DGEMM_opt_1:
 
-![13](/home/kapally3/Desktop/NSTU/Lab3/images/13.png)
+![13](images/13.png)
 
 ​	С оптимизацией количество промахов (cashe-misses) меньше на ~55%, т.е. в ~2 раза.
 
